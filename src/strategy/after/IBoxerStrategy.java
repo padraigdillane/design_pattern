@@ -1,5 +1,7 @@
 package strategy.after;
 
+import state.PlayerBoxerState;
+
 public interface IBoxerStrategy {
-    void move(int health);
+    void cornerManShout(int playerHealth);
 }

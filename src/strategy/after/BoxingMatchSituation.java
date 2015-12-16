@@ -6,8 +6,7 @@ public class BoxingMatchSituation{
     private IBoxerStrategy iBoxerStrategy;
 
     private PlayerBoxerState playerBoxerState;
-    private PlayerBoxer playerBoxer = new PlayerBoxer();
-
+    private PlayerBoxer playerBoxer = new PlayerBoxer(100);
 
     public BoxingMatchSituation(IBoxerStrategy iBoxerStrategy) {
         this.iBoxerStrategy = iBoxerStrategy;

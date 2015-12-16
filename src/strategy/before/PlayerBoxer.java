@@ -3,14 +3,8 @@ package strategy.before;
 public class PlayerBoxer implements IBoxer {
     private int health = 100;
 
-    //replace with state
     @Override
-    public void incHealth(int amount) {
-        health += amount;
-    }
-
-    @Override
-    public void decHealth(int amount) {
+    public void decreasePlayerHealth(int amount) {
         health -= amount;
     }
 
@@ -21,7 +15,7 @@ public class PlayerBoxer implements IBoxer {
 
     // replace with startegy
     @Override
-    public String move(){
+    public String action(){
 
        if(health >= 50){
            return "attack";

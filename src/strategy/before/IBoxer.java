@@ -1,8 +1,7 @@
 package strategy.before;
 
 public interface IBoxer {
-    void incHealth(int amount);
-    void decHealth(int amount);
+    void decreasePlayerHealth(int amount);
     int getHealth();
-    String move(); //action away/action in for kill
+    String action();
 }

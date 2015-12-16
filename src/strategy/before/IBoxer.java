@@ -1,4 +1,4 @@
-package strategy.after;
+package strategy.before;
 
 public interface IBoxer {
     void incHealth(int amount);

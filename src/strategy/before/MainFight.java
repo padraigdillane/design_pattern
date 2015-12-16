@@ -1,4 +1,4 @@
-package strategy.after;
+package strategy.before;
 
 public class MainFight {
     public static void main(String[] args) {

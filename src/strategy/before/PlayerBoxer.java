@@ -1,4 +1,4 @@
-package strategy.after;
+package strategy.before;
 
 public class PlayerBoxer implements IBoxer {
     private int health = 100;

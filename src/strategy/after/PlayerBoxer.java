@@ -7,6 +7,9 @@ public class PlayerBoxer implements IBoxer{
         this.playerHealth = playerHealth;
     }
 
+    public PlayerBoxer() {
+    }
+
     @Override
     public void decreasePlayerHealth(int amount) {
         playerHealth -= amount;

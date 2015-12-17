@@ -3,7 +3,7 @@ package strategy.after;
 public interface IBoxer {
     void decreasePlayerHealth(int amount);
     int getHealth();
-    void attacking();
+    String attacking();
     void jab();
     void hook();
     void uppercut();

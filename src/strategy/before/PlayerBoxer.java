@@ -18,12 +18,12 @@ public class PlayerBoxer implements IBoxer {
     public String action(){
 
        if(health >= 50){
-           return "attack";
+           return "cardio";
        }
 
 
         if(health >= 30 && health < 49){
-            return "be cautious";
+            return "be doWeights";
         }
 
 

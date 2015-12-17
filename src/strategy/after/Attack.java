@@ -1,8 +1,5 @@
 package strategy.after;
 
-
-import state.PlayerBoxerState;
-
 public class Attack implements IBoxerStrategy {
 
     @Override

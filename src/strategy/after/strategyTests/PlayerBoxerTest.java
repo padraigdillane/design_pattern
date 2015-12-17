@@ -1,6 +1,8 @@
 package strategy.after.strategyTests;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import strategy.after.PlayerBoxer;
 
@@ -10,16 +12,26 @@ import static org.junit.Assert.*;
  * Created by User on 16/12/2015.
  */
 public class PlayerBoxerTest {
-    PlayerBoxer playerBoxer = new PlayerBoxer(100);
+
+    private PlayerBoxer playerBoxer;
+
+    @Before
+    public void setUp() throws Exception{
+        System.out.println("Setting it up!");
+        playerBoxer = new PlayerBoxer(100);
+    }
+
     @Test
     public void testDecreasePlayerHealth() throws Exception {
-
+        playerBoxer.decreasePlayerHealth(50);
+        Assert.assertEquals(playerBoxer.getHealth(), 50);
     }
 
     @Test
-    public void testGetHealth() throws Exception {
+    public void testPlayerHasFullHealth() throws Exception {
         Assert.assertEquals(playerBoxer.getHealth(), 100);
     }
+
 
     @Test
     public void testAttacking() throws Exception {
@@ -64,5 +76,12 @@ public class PlayerBoxerTest {
     @Test
     public void testCautious() throws Exception {
 
+    }
+
+    @After
+    public void tearDown() throws Exception{
+        System.out.println("Running: tearDown");
+        playerBoxer = null;
+        assertNull(playerBoxer);
     }
 }

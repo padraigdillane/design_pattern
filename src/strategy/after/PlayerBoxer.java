@@ -1,6 +1,6 @@
 package strategy.after;
 
-public class PlayerBoxer implements IBoxer{
+public class PlayerBoxer implements IBoxer {
     int playerHealth;
 
     public PlayerBoxer(int playerHealth) {
@@ -22,8 +22,8 @@ public class PlayerBoxer implements IBoxer{
 
 
     @Override
-    public void attacking() {
-        System.out.println("Attacking");
+    public String attacking() {
+        return "attacking";
     }
 
     @Override
@@ -64,5 +64,9 @@ public class PlayerBoxer implements IBoxer{
     @Override
     public void cautious() {
         System.out.println("Being Cautious");
+    }
+
+    public void print(String action) {
+        System.out.println(action);
     }
 }

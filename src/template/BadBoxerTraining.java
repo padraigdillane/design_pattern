@@ -3,7 +3,7 @@ package template;
 /**
  * Created by User on 17/12/2015.
  */
-public class BadBoxer extends BoxerTraining{
+public class BadBoxerTraining extends BoxerTraining{
     @Override
     public boolean doCardio() {
         System.out.println("Lying on the couch watching TV");

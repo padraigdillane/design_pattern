@@ -20,7 +20,6 @@ public class PlayerBoxer implements IBoxer {
         return playerHealth;
     }
 
-
     @Override
     public String attacking() {
         return "attacking";

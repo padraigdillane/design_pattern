@@ -4,16 +4,14 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import template.GoodBoxer;
-
-import static org.junit.Assert.*;
+import template.GoodBoxerTraining;
 
 public class BoxerTrainingTest {
-    GoodBoxer goodBoxer;
+    GoodBoxerTraining goodBoxer;
 
     @Before
     public void setUp() throws Exception {
-        goodBoxer = new GoodBoxer();
+        goodBoxer = new GoodBoxerTraining();
     }
 
     @After
@@ -23,17 +21,17 @@ public class BoxerTrainingTest {
 
 
     @Test
-    public void boxerIsDoingCardio() throws Exception {
+    public void testGoodBoxerIsDoingCardio() throws Exception {
         Assert.assertEquals(goodBoxer.doCardio(), true);
     }
 
     @Test
-    public void testDoWeights() throws Exception {
+    public void testGoodBoxerDoingWeights() throws Exception {
         Assert.assertEquals(goodBoxer.doWeights(),true);
     }
 
     @Test
-    public void testDoBoxingSession() throws Exception {
+    public void testGoodBoxerDoingBoxingSession() throws Exception {
         Assert.assertEquals(goodBoxer.doBoxingSession(), true);
     }
 

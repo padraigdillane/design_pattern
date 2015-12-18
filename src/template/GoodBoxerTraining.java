@@ -2,7 +2,7 @@ package template;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
-public class GoodBoxer extends BoxerTraining {
+public class GoodBoxerTraining extends BoxerTraining {
     @Override
     public boolean doCardio() {
         System.out.println("Running 10 miles");

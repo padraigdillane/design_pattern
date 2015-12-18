@@ -4,16 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainBoxerDivisions {
+public class MainBoxer {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        getBoxerWeightDivision BoxerWeightF = new getBoxerWeightDivision();
+        BoxerType boxerType = new BoxerType();
 
         //System.out.println("Please Select Boxer weight division");
         //boxerWeights value = boxerWeights.values()[br.];
         //String b = br.readLine();
 
-        BoxerWeightDivision p = BoxerWeightF.getBoxerWeightDivision("Lightweight");
+        IBoxer p = boxerType.getBoxerType("Lightweight");
         System.out.println(p.boxerDetails());
 
 

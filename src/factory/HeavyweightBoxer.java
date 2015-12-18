@@ -1,14 +1,30 @@
-package strategy.after;
+package factory;
 
-public class PlayerBoxer implements IBoxer {
-    int playerHealth;
 
-    public PlayerBoxer(int playerHealth) {
-        this.playerHealth = playerHealth;
+public class HeavyweightBoxer implements IBoxer {
+    private int power = 90;
+    private int speed = 70;
+    private int playerHealth = 100;
+
+    @Override
+    public String getWeight() {
+        return "Heavy Weight Boxer";
     }
 
-    public PlayerBoxer() {
+    @Override
+    public int getPower() {
+        return power;
     }
+
+    @Override
+    public int getSpeed() {
+        return speed;
+    }
+
+    public String boxerDetails(){
+        return String.format("Boxer Details: \nWeight: %-25s  Strength: %-10d Speed %d\n", getWeight(), getPower(), getSpeed());
+    }
+
 
     @Override
     public void decreasePlayerHealth(int amount) {
@@ -22,17 +38,17 @@ public class PlayerBoxer implements IBoxer {
 
     @Override
     public String attacking() {
-        return "attacking";
+        return "Light Weight attacking";
     }
 
     @Override
     public void jab() {
-        System.out.println("pb jab");
+        System.out.println("HW jab");
     }
 
     @Override
     public void hook() {
-        System.out.println("Hook");
+        System.out.println("HW Hook");
     }
 
     @Override
@@ -68,4 +84,5 @@ public class PlayerBoxer implements IBoxer {
     public void print(String action) {
         System.out.println(action);
     }
+
 }

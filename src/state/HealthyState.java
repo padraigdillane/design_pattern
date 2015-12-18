@@ -1,13 +1,13 @@
 package state;
 
-import strategy.after.PlayerBoxer;
+import factory.IBoxer;
 
 public class HealthyState implements PlayerBoxerState {
     @Override
-    public void action(PlayerBoxer playerBoxer) {
-        playerBoxer.attacking();
-        playerBoxer.jab();
-        playerBoxer.hook();
-        playerBoxer.uppercut();
+    public void action(IBoxer boxer) {
+        boxer.attacking();
+        boxer.jab();
+        boxer.hook();
+        boxer.uppercut();
     }
 }

@@ -1,11 +1,11 @@
 package state;
 
-import strategy.after.PlayerBoxer;
+import factory.IBoxer;
 
 public class KnockedOutState implements PlayerBoxerState {
 
     @Override
-    public void action(PlayerBoxer playerBoxer) {
-        playerBoxer.knockedOut();
+    public void action(IBoxer boxer) {
+        boxer.knockedOut();
     }
 }

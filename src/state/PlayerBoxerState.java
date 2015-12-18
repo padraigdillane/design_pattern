@@ -1,7 +1,8 @@
 package state;
 
-import strategy.after.PlayerBoxer;
+//import strategy.after.PlayerBoxer;
+import factory.IBoxer;
 
 public interface PlayerBoxerState {
-    void action(PlayerBoxer playerBoxer);
+    void action(IBoxer boxer);
 }

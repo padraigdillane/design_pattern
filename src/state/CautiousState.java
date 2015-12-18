@@ -1,14 +1,15 @@
 package state;
 
-import strategy.after.PlayerBoxer;
+import factory.IBoxer;
 
 public class CautiousState implements PlayerBoxerState{
+
     @Override
-    public void action(PlayerBoxer playerBoxer) {
-        playerBoxer.cautious();
-        playerBoxer.block();
-        playerBoxer.jab();
-        playerBoxer.jab();
-        playerBoxer.block();
+    public void action(IBoxer boxer) {
+        boxer.cautious();
+        boxer.block();
+        boxer.jab();
+        boxer.jab();
+        boxer.block();
     }
 }

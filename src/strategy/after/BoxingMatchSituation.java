@@ -1,5 +1,7 @@
 package strategy.after;
 
+import factory.*;
+import factory.IBoxer;
 import state.PlayerBoxerState;
 
 public class BoxingMatchSituation{
@@ -8,8 +10,12 @@ public class BoxingMatchSituation{
     private PlayerBoxerState playerBoxerState;
     private PlayerBoxer playerBoxer = new PlayerBoxer();
 
-    public BoxingMatchSituation(IBoxerStrategy iBoxerStrategy) {
+    private IBoxer bb;
+    LightweightBoxer b = new LightweightBoxer();
+
+    public BoxingMatchSituation(IBoxerStrategy iBoxerStrategy, IBoxer bb) {
         this.iBoxerStrategy = iBoxerStrategy;
+        this.bb = bb;
     }
 
     public void adjustCornerManAdvice(int health){
@@ -21,6 +27,6 @@ public class BoxingMatchSituation{
     }
 
     public void getBoxerAction(){
-        playerBoxerState.action(playerBoxer);
+        playerBoxerState.action(bb);
     }
 }

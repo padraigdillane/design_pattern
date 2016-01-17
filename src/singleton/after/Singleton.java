@@ -1,4 +1,4 @@
-package singleton;
+package singleton.after;
 
 public class Singleton {
     private static Singleton singletonInstance;
@@ -9,12 +9,13 @@ public class Singleton {
 
     public static Singleton getInstance(){
         if (singletonInstance == null){
-            singletonInstance = new Singleton();
+
+            synchronized (Singleton.class){
+                if (singletonInstance == null){
+                    singletonInstance = new Singleton();
+                }
+            }
         }
         return singletonInstance;
-    }
-
-    public void print(Singleton name ,Singleton object){
-        System.out.println(String.format("OBJ %s, Hashcode %d" , name ,object.hashCode()));
     }
 }

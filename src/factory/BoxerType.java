@@ -6,7 +6,7 @@ package factory;
 public class BoxerType {
 
     public static final String LIGHTWEIGHT = "lightweight";
-    public static final String HEAVYWEIGHT = "Heavyweight";
+    public static final String HEAVYWEIGHT = "heavyweight";
 
     public IBoxer getBoxerType(String boxerType){
         if(boxerType == null){
